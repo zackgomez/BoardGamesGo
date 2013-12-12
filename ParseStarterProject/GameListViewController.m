@@ -49,7 +49,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return 0;
 }
 
 
@@ -73,12 +73,8 @@
     }
     NSString *text;
     int index =[indexPath indexAtPosition:1];
-    if (index == 0) {
-        text = [PFUser currentUser][@"display_name"];
-    } else {
-        text = [NSString stringWithFormat:@"%d", index];
-    }
     
+    text = [NSString stringWithFormat:@"%d", index];
     cell.textLabel.text = text;
     return cell;
 }
