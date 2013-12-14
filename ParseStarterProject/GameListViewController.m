@@ -8,7 +8,7 @@
 
 #import "GameListViewController.h"
 #import <Parse/Parse.h>
-#import "NewGameViewController.h"
+#import "QuickDialog.h"
 
 @implementation GameListViewController
 
@@ -19,12 +19,14 @@
         [self showLoginModal];
     }
     
+    self.games = [[NSMutableArray alloc] init];
+    
     self.tableView = [[UITableView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame] style:UITableViewStylePlain];
     self.tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.view = self.tableView;
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewGame)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showNewGameDialog)];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(previousMenu)];
 }
 
@@ -32,8 +34,45 @@
     [self.tableView reloadData];
 }
 
-- (void)addNewGame {
-    [self.navigationController pushViewController:[[NewGameViewController alloc] init] animated:YES];
+- (void)showNewGameDialog {
+    QRootElement *root = [[QRootElement alloc] init];
+    root.title = @"New Game";
+    root.grouped = YES;
+    QSection *section = [[QSection alloc] init];
+    QEntryElement *name_element = [[QEntryElement alloc] initWithTitle:@"Game" Value:@"Puerto Rico"];
+    QDecimalElement *players_element = [[QDecimalElement alloc] initWithTitle:@"Number of Players" value:@4];
+    players_element.fractionDigits = 0;
+    QBooleanElement *publish_element = [[QBooleanElement alloc] initWithTitle:@"Broadcast game" BoolValue:NO];
+    
+    [root addSection:section];
+    [section addElement:name_element];
+    [section addElement:players_element];
+    [section addElement:publish_element];
+    
+    QSection *final_section = [[QSection alloc] init];
+    QButtonElement *submit_element = [[QButtonElement alloc] initWithTitle:@"Make Game"];
+    submit_element.onSelected = ^() {
+        NSLog(@"Submitted baby");
+        
+        PFUser *user = [PFUser currentUser];
+        if (!user) {
+            return;
+        }
+        PFObject *new_game_obj = [PFObject objectWithClassName:@"Game"];
+        new_game_obj[@"owner"] = user;
+        new_game_obj[@"name"] = name_element.textValue;
+        new_game_obj[@"players"] = players_element.numberValue;
+        new_game_obj[@"published"] = @(publish_element.boolValue);
+        [new_game_obj saveInBackground];
+        [self.games addObject:new_game_obj];
+        
+        [self.navigationController popViewControllerAnimated:YES];
+    };
+    [final_section addElement:submit_element];
+    [root addSection:final_section];
+    
+    QuickDialogController *dialog = [QuickDialogController controllerForRoot:root];
+    [self.navigationController pushViewController:dialog animated:YES];
 }
 
 - (void)previousMenu {
@@ -42,18 +81,18 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    if ([PFUser currentUser]) {
-        return 1;
-    }
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return self.games.count;
 }
 
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    if (section == 1) {
+        return @"All Games";
+    }
     return nil;
 }
 
@@ -71,11 +110,10 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault  reuseIdentifier:reuseIdentifier];
     }
-    NSString *text;
     int index =[indexPath indexAtPosition:1];
+    PFObject* game = self.games[index];
     
-    text = [NSString stringWithFormat:@"%d", index];
-    cell.textLabel.text = text;
+    cell.textLabel.text = game[@"name"];
     return cell;
 }
 

@@ -1,5 +1,5 @@
 #import <Parse/Parse.h>
-#import "ParseStarterProjectAppDelegate.h"
+#import "BoardGamesGoAppDelegate.h"
 #import "GameListViewController.h"
 
 @implementation ParseStarterProjectAppDelegate
@@ -21,6 +21,7 @@
     
     // Override point for customization after application launch.
     
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[GameListViewController alloc] init]];
     self.window.backgroundColor = [UIColor magentaColor];
     [self.window makeKeyAndVisible];

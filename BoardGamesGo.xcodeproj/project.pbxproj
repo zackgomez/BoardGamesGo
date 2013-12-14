@@ -18,18 +18,14 @@
 		09ABC07413A1D52D009C3FCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09ABC07313A1D52D009C3FCF /* Foundation.framework */; };
 		09ABC07C13A1D52D009C3FCF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 09ABC07A13A1D52D009C3FCF /* InfoPlist.strings */; };
 		09ABC07F13A1D52D009C3FCF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 09ABC07E13A1D52D009C3FCF /* main.m */; };
-		09ABC08213A1D52D009C3FCF /* ParseStarterProjectAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09ABC08113A1D52D009C3FCF /* ParseStarterProjectAppDelegate.m */; };
-		09ABC08513A1D52E009C3FCF /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09ABC08313A1D52D009C3FCF /* MainWindow.xib */; };
+		09ABC08213A1D52D009C3FCF /* BoardGamesGoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09ABC08113A1D52D009C3FCF /* BoardGamesGoAppDelegate.m */; };
 		09BEF34C13D51C3F001BBCDB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09BEF34B13D51C3F001BBCDB /* Security.framework */; };
 		2FCDD6B014A573F500295AAC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FCDD6AF14A573F500295AAC /* QuartzCore.framework */; };
 		4998650515BF305000803E05 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4998650415BF305000803E05 /* StoreKit.framework */; };
 		743D7B6D157DA60100084B67 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 743D7B6C157DA60100084B67 /* CoreGraphics.framework */; };
-		864F904B185A6D47001A1FFC /* NewGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 864F904A185A6D47001A1FFC /* NewGameViewController.m */; };
+		864F9059185A86F3001A1FFC /* libQuickDialog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 864F9056185A76CD001A1FFC /* libQuickDialog.a */; };
 		86AB12C3185A4476004145AE /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86AB12C2185A4476004145AE /* FacebookSDK.framework */; };
 		86AB12C6185A4E0A004145AE /* GameListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86AB12C5185A4E0A004145AE /* GameListViewController.m */; };
-		C4C51B571613CE0800959FDC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C4C51B541613CE0800959FDC /* Default.png */; };
-		C4C51B581613CE0800959FDC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4C51B551613CE0800959FDC /* Default-568h@2x.png */; };
-		C4C51B591613CE0800959FDC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4C51B561613CE0800959FDC /* Default@2x.png */; };
 		DD952FCB16E7F5CF00470144 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97E18B1E1624CB5700B17A67 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +44,13 @@
 			remoteGlobalIDString = 2C542393145ADEBD0026A152;
 			remoteInfo = QuickDialog;
 		};
+		864F9057185A86EE001A1FFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 864F904E185A76CD001A1FFC /* QuickDialog.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C542392145ADEBD0026A152;
+			remoteInfo = QuickDialog;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -58,16 +61,15 @@
 		094AC9FF14367ACD008398F8 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		095ACE8513C68EA300566243 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		099CCEAC13F9E3760039A464 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
-		09ABC06D13A1D52D009C3FCF /* ParseStarterProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseStarterProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		09ABC06D13A1D52D009C3FCF /* BoardGamesGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoardGamesGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09ABC07113A1D52D009C3FCF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		09ABC07313A1D52D009C3FCF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		09ABC07913A1D52D009C3FCF /* ParseStarterProject-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ParseStarterProject-Info.plist"; sourceTree = "<group>"; };
+		09ABC07913A1D52D009C3FCF /* BoardGamesGo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BoardGamesGo-Info.plist"; sourceTree = "<group>"; };
 		09ABC07B13A1D52D009C3FCF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		09ABC07D13A1D52D009C3FCF /* ParseStarterProject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ParseStarterProject-Prefix.pch"; sourceTree = "<group>"; };
+		09ABC07D13A1D52D009C3FCF /* BoardGamesGo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BoardGamesGo-Prefix.pch"; sourceTree = "<group>"; };
 		09ABC07E13A1D52D009C3FCF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		09ABC08013A1D52D009C3FCF /* ParseStarterProjectAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParseStarterProjectAppDelegate.h; sourceTree = "<group>"; };
-		09ABC08113A1D52D009C3FCF /* ParseStarterProjectAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParseStarterProjectAppDelegate.m; sourceTree = "<group>"; };
-		09ABC08413A1D52E009C3FCF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		09ABC08013A1D52D009C3FCF /* BoardGamesGoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BoardGamesGoAppDelegate.h; sourceTree = "<group>"; };
+		09ABC08113A1D52D009C3FCF /* BoardGamesGoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BoardGamesGoAppDelegate.m; sourceTree = "<group>"; };
 		09BEF34B13D51C3F001BBCDB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		2FCDD6AF14A573F500295AAC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4998650415BF305000803E05 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -76,16 +78,11 @@
 		6372FF551613CC42002132AF /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		6372FF571613CC47002132AF /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		743D7B6C157DA60100084B67 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		864F9049185A6D47001A1FFC /* NewGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewGameViewController.h; sourceTree = "<group>"; };
-		864F904A185A6D47001A1FFC /* NewGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewGameViewController.m; sourceTree = "<group>"; };
 		864F904E185A76CD001A1FFC /* QuickDialog.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QuickDialog.xcodeproj; path = QuickDialog/QuickDialog.xcodeproj; sourceTree = "<group>"; };
 		86AB12C2185A4476004145AE /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		86AB12C4185A4E0A004145AE /* GameListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameListViewController.h; sourceTree = "<group>"; };
 		86AB12C5185A4E0A004145AE /* GameListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameListViewController.m; sourceTree = "<group>"; };
 		97E18B1E1624CB5700B17A67 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		C4C51B541613CE0800959FDC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		C4C51B551613CE0800959FDC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		C4C51B561613CE0800959FDC /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				864F9059185A86F3001A1FFC /* libQuickDialog.a in Frameworks */,
 				DD952FCB16E7F5CF00470144 /* CoreLocation.framework in Frameworks */,
 				4998650515BF305000803E05 /* StoreKit.framework in Frameworks */,
 				743D7B6D157DA60100084B67 /* CoreGraphics.framework in Frameworks */,
@@ -116,7 +114,8 @@
 		09ABC06213A1D52D009C3FCF = {
 			isa = PBXGroup;
 			children = (
-				09ABC07713A1D52D009C3FCF /* ParseStarterProject */,
+				864F904E185A76CD001A1FFC /* QuickDialog.xcodeproj */,
+				09ABC07713A1D52D009C3FCF /* BoardGamesGo */,
 				09ABC07013A1D52D009C3FCF /* Frameworks */,
 				09ABC06E13A1D52D009C3FCF /* Products */,
 			);
@@ -125,7 +124,7 @@
 		09ABC06E13A1D52D009C3FCF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				09ABC06D13A1D52D009C3FCF /* ParseStarterProject.app */,
+				09ABC06D13A1D52D009C3FCF /* BoardGamesGo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,7 +132,6 @@
 		09ABC07013A1D52D009C3FCF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				864F904E185A76CD001A1FFC /* QuickDialog.xcodeproj */,
 				86AB12C2185A4476004145AE /* FacebookSDK.framework */,
 				6372FF571613CC47002132AF /* AdSupport.framework */,
 				6372FF551613CC42002132AF /* Social.framework */,
@@ -156,31 +154,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		09ABC07713A1D52D009C3FCF /* ParseStarterProject */ = {
+		09ABC07713A1D52D009C3FCF /* BoardGamesGo */ = {
 			isa = PBXGroup;
 			children = (
-				864F9049185A6D47001A1FFC /* NewGameViewController.h */,
-				864F904A185A6D47001A1FFC /* NewGameViewController.m */,
 				86AB12C4185A4E0A004145AE /* GameListViewController.h */,
 				86AB12C5185A4E0A004145AE /* GameListViewController.m */,
-				09ABC08013A1D52D009C3FCF /* ParseStarterProjectAppDelegate.h */,
-				09ABC08113A1D52D009C3FCF /* ParseStarterProjectAppDelegate.m */,
-				09ABC08313A1D52D009C3FCF /* MainWindow.xib */,
+				09ABC08013A1D52D009C3FCF /* BoardGamesGoAppDelegate.h */,
+				09ABC08113A1D52D009C3FCF /* BoardGamesGoAppDelegate.m */,
 				09ABC07813A1D52D009C3FCF /* Supporting Files */,
 			);
+			name = BoardGamesGo;
 			path = ParseStarterProject;
 			sourceTree = "<group>";
 		};
 		09ABC07813A1D52D009C3FCF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C4C51B541613CE0800959FDC /* Default.png */,
-				C4C51B561613CE0800959FDC /* Default@2x.png */,
-				C4C51B551613CE0800959FDC /* Default-568h@2x.png */,
-				09ABC07913A1D52D009C3FCF /* ParseStarterProject-Info.plist */,
+				09ABC07913A1D52D009C3FCF /* BoardGamesGo-Info.plist */,
 				09144A7213C2997E00388B00 /* Entitlements.plist */,
 				09ABC07A13A1D52D009C3FCF /* InfoPlist.strings */,
-				09ABC07D13A1D52D009C3FCF /* ParseStarterProject-Prefix.pch */,
+				09ABC07D13A1D52D009C3FCF /* BoardGamesGo-Prefix.pch */,
 				09ABC07E13A1D52D009C3FCF /* main.m */,
 			);
 			name = "Supporting Files";
@@ -198,9 +191,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		09ABC06C13A1D52D009C3FCF /* ParseStarterProject */ = {
+		09ABC06C13A1D52D009C3FCF /* BoardGamesGo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 09ABC08E13A1D52E009C3FCF /* Build configuration list for PBXNativeTarget "ParseStarterProject" */;
+			buildConfigurationList = 09ABC08E13A1D52E009C3FCF /* Build configuration list for PBXNativeTarget "BoardGamesGo" */;
 			buildPhases = (
 				09ABC06913A1D52D009C3FCF /* Sources */,
 				09ABC06A13A1D52D009C3FCF /* Frameworks */,
@@ -209,10 +202,11 @@
 			buildRules = (
 			);
 			dependencies = (
+				864F9058185A86EE001A1FFC /* PBXTargetDependency */,
 			);
-			name = ParseStarterProject;
+			name = BoardGamesGo;
 			productName = ParseStarterProject;
-			productReference = 09ABC06D13A1D52D009C3FCF /* ParseStarterProject.app */;
+			productReference = 09ABC06D13A1D52D009C3FCF /* BoardGamesGo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -223,7 +217,7 @@
 			attributes = {
 				LastUpgradeCheck = 0430;
 			};
-			buildConfigurationList = 09ABC06713A1D52D009C3FCF /* Build configuration list for PBXProject "ParseStarterProject" */;
+			buildConfigurationList = 09ABC06713A1D52D009C3FCF /* Build configuration list for PBXProject "BoardGamesGo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -241,7 +235,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				09ABC06C13A1D52D009C3FCF /* ParseStarterProject */,
+				09ABC06C13A1D52D009C3FCF /* BoardGamesGo */,
 			);
 		};
 /* End PBXProject section */
@@ -269,11 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09ABC07C13A1D52D009C3FCF /* InfoPlist.strings in Resources */,
-				09ABC08513A1D52E009C3FCF /* MainWindow.xib in Resources */,
 				09144A7313C2997E00388B00 /* Entitlements.plist in Resources */,
-				C4C51B571613CE0800959FDC /* Default.png in Resources */,
-				C4C51B581613CE0800959FDC /* Default-568h@2x.png in Resources */,
-				C4C51B591613CE0800959FDC /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,13 +275,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				86AB12C6185A4E0A004145AE /* GameListViewController.m in Sources */,
-				864F904B185A6D47001A1FFC /* NewGameViewController.m in Sources */,
 				09ABC07F13A1D52D009C3FCF /* main.m in Sources */,
-				09ABC08213A1D52D009C3FCF /* ParseStarterProjectAppDelegate.m in Sources */,
+				09ABC08213A1D52D009C3FCF /* BoardGamesGoAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		864F9058185A86EE001A1FFC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = QuickDialog;
+			targetProxy = 864F9057185A86EE001A1FFC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		09ABC07A13A1D52D009C3FCF /* InfoPlist.strings */ = {
@@ -300,14 +297,6 @@
 				09ABC07B13A1D52D009C3FCF /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		09ABC08313A1D52D009C3FCF /* MainWindow.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				09ABC08413A1D52E009C3FCF /* en */,
-			);
-			name = MainWindow.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -360,11 +349,12 @@
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ParseStarterProject/ParseStarterProject-Prefix.pch";
+				GCC_PREFIX_HEADER = "ParseStarterProject/BoardGamesGo-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				INFOPLIST_FILE = "ParseStarterProject/ParseStarterProject-Info.plist";
+				INFOPLIST_FILE = "ParseStarterProject/BoardGamesGo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = BoardGamesGo;
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/QuickDialog\"/**";
 				WRAPPER_EXTENSION = app;
 			};
@@ -382,11 +372,12 @@
 					/Users/zacharyg/Documents/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ParseStarterProject/ParseStarterProject-Prefix.pch";
+				GCC_PREFIX_HEADER = "ParseStarterProject/BoardGamesGo-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				INFOPLIST_FILE = "ParseStarterProject/ParseStarterProject-Info.plist";
+				INFOPLIST_FILE = "ParseStarterProject/BoardGamesGo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = BoardGamesGo;
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/QuickDialog\"/**";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
@@ -396,7 +387,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		09ABC06713A1D52D009C3FCF /* Build configuration list for PBXProject "ParseStarterProject" */ = {
+		09ABC06713A1D52D009C3FCF /* Build configuration list for PBXProject "BoardGamesGo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				09ABC08C13A1D52E009C3FCF /* Debug */,
@@ -405,7 +396,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		09ABC08E13A1D52E009C3FCF /* Build configuration list for PBXNativeTarget "ParseStarterProject" */ = {
+		09ABC08E13A1D52E009C3FCF /* Build configuration list for PBXNativeTarget "BoardGamesGo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				09ABC08F13A1D52E009C3FCF /* Debug */,

@@ -12,5 +12,6 @@
 @interface GameListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, PFLogInViewControllerDelegate>
 
 @property (nonatomic, strong) UITableView* tableView;
+@property (nonatomic, strong) NSMutableArray* games;
 
 @end
